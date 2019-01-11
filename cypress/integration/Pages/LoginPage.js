@@ -1,18 +1,18 @@
 class LoginPage {
     visit() {
-      cy.visit('https://ccstore-stage-zb5a.oracleoutsourcing.com/login');
+      cy.visit('login');
     }
   
     getEmailError() {
-      return cy.get('#emailErrorMessage');
+      return cy.get('#emailErrorMessage', {timeout: 10000});
     }
   
     getPasswordError() {
-      return cy.get('#passwordErrorMessage');
+      return cy.get('#passwordErrorMessage', {timeout: 10000});
     }
   
     fillEmail(value) {
-      const field = cy.get('#email');
+      const field = cy.get('[test-id="email"]', {timeout: 15000});
       field.clear();
       field.type(value);
       
@@ -20,7 +20,7 @@ class LoginPage {
     }
   
     fillPassword(value) {
-      const field = cy.get('#password');
+      const field = cy.get('#password', {timeout: 15000});
       field.clear();
       field.type(value);
       
@@ -28,8 +28,8 @@ class LoginPage {
     }
     
     submit() {
-      const button = cy.get('#btnLogin');
-      button.click();
+      const button = cy.get('#btnLogin', {timeout: 15000});
+      button.click({force:true});
     }
   }
   

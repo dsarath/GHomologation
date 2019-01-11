@@ -1,3 +1,26 @@
 {
-  "projectId": "6ndde9"
+  "projectId": "6ndde9",
+  "baseUrl": "https://ccstore-stage-zb5a.oracleoutsourcing.com/",
+
+  "ignoreTestFiles":"../GHomologation/cypress/integration/Pages/*.js",
+  "pageLoadTimeout":30000,
+  "env": {
+    "pfUser": "automatedTestPF@mailinator.com",
+    "pjUser": "automatedTestPJ@mailinator.com",
+    "vendor":"rerocha@gimba.com.br",
+    "vendorPassword":"rcr1202",
+	  "administrator": "jusouza@gimba.com.br",
+    "administratorPassword": "gimba2018",
+    "password": "Admin123",
+    "pfClient": "97423162361",
+    "pjClient": "08606505000106",
+    "pjContact": "Laine Marinho",
+    "pjClientVIP": "62255682000130",
+    "pjContatoVIP": "Erasmo ou Lucia",
+    "prodInStock": "10296549",
+	  "valorSugerido": "49,99",
+    "prodOutStock": "10641750",
+    "prodInStock2": "10721770",
+    "pfOrcamentoUser": "automatedTestPF@mailinator.com"
+  }
 }

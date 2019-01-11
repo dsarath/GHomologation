@@ -4,12 +4,11 @@ class CheckoutB2CPage {
     clickFirstAddress(){
         const firstAddress = cy.get('.address-box', {timeout: 15000});
         firstAddress.click({force:true});
-        cy.wait(10000);
+        cy.wait(8000);
         return this;
     }
     selectFrete(frete){
-        cy.get('.frete-calc', {timeout:15000}).eq(frete).click();
-        //cy.get('.frete-calc', {timeout:15000}).first().click({force:true});
+        cy.get('.frete-calc', {timeout:15000}).eq(frete).click({force:true});
         return this;
     }
     clickBoletoOption(){
@@ -52,6 +51,9 @@ class CheckoutB2CPage {
         const opcaoCartao =  cy.get(':nth-child(1) > .font-weight-100 > .radiomark');
         opcaoCartao.click({force:true});
         return this;
+    }
+    clickContribuicao(){
+        
     }
 }
   
